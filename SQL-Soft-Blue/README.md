@@ -275,7 +275,7 @@
   * Como funciona?
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/94937578/177654417-4cda8dec-05b2-432c-988e-090eaac76cfe.PNG"/>
+<img src="https://user-images.githubusercontent.com/94937578/177654417-4cda8dec-05b2-432c-988e-090eaac76cfe.PNG" width="700px"/>
 </div>
 
 * <b>CREATE DATABASE Nome</b>
@@ -290,7 +290,7 @@
   * Como funciona?
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/94937578/177654569-3404b9e8-a4a1-4669-8cb8-60fa4c35f025.PNG"/>
+<img src="https://user-images.githubusercontent.com/94937578/177654569-3404b9e8-a4a1-4669-8cb8-60fa4c35f025.PNG" width="700px"/>
 </div>
 
   * <b>CREATE TABLE Nome Campos</b>
@@ -307,7 +307,7 @@
   * Como funciona?
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/94937578/177654621-7471d364-bd61-426a-847b-ed092800957d.PNG"/>
+<img src="https://user-images.githubusercontent.com/94937578/177654621-7471d364-bd61-426a-847b-ed092800957d.PNG" width="700px"/>
 </div>
 
   * <b>CREATE INDEX Nome ON TabelaEColuna</b>
