@@ -320,3 +320,94 @@
   * <b>ALTER SEQUENCE Nome Propriedade</b>
   * <b>DROP SEQUENCE Nome</b>
     Exclusão é definitiva e irreversível
+
+
+
+### 4. MANIPULANDO DADOS
+
+#### DML e DQL:
+  * <b>DML => Linguagem de Mnipulação de Dados</b>
+    - INSERT: Insere dados.
+    - UPDATE: Altera dados.
+    - DELETE: Exclui dados.
+  * <b>DQL => Linguagem de Consulta de Dados</b>
+    - SELECT: Retorna dados.
+    - Ordenação de dados.
+    - Agrupamento de dados.
+    - Filtros de seleção.
+    - Funções aritméticas.
+
+#### Gerenciando dados:
+  * INSERT INTO Tabela VALUES (Valores)
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/94937578/177778505-2832dc4e-8b06-4fd5-a90b-16315a8c7e5b.PNG" width="700px"/>
+</div>
+
+  * SELECT Campos FROM Tabela
+  
+<div align="center">
+<img src="https://user-images.githubusercontent.com/94937578/177778582-95277cae-df3d-406a-a2dd-df37fbcb1705.PNG" width="700px" width="700px"/>
+</div>
+
+  * UPDATE Tabela SET Campo = Valor
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/94937578/177778770-c1375d3b-58f3-4728-85b0-548bd055805f.PNG"/>
+</div>
+
+  * DELETE FROM Tabela
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/94937578/177779007-e500f011-1071-4c52-a9d1-1601642d49fa.PNG" width="700px"/>
+</div>
+
+#### Filtos de seleção:
+  * Registros selecionados (WHERE)
+  * Operadores relacionais:
+    - Igual (=), Diferente (!=)
+    - Maior (>), Maior ou Igual (>=)
+    - Menor (<), Menor ou Igual (<=)
+    - Nulo (ISNULL) ou Não Nulo (IS NOT NULL)
+    - Entre intervalo (BETWEEN)
+    - Valor parcial (LIKE)
+  * Operadores lógicos:
+    - AND
+    - OR
+    - NOT
+
+#### Consultando dados com filtros:
+  * SELECT Campos FROM Tabela WHERE Condição
+<div align="center">
+<img src="https://user-images.githubusercontent.com/94937578/177779259-e066a663-5277-47ed-9eb5-a49b7cba9577.PNG" width="700px"/>
+</div>
+
+  * UPDATE Tabela SET Campo = Valor WHERE Condição
+<div align="center">
+<img src="https://user-images.githubusercontent.com/94937578/177779459-dcdeaeee-0f4d-4ed5-9f57-edbc2b2238be.PNG" width="700px"/>
+</div>
+
+  * DELETE FROM Tabela WHERE Condição
+<div align="center">
+<img src="https://user-images.githubusercontent.com/94937578/177779605-e05ef5df-fee8-44a3-ae5a-859e12b89fba.PNG" width="700px"/>
+</div>
+
+#### Atributos especiais:
+  * Apelido de tabela:
+    SELECT Campos FROM Tabela Apelido...
+ <div align="center">
+<img src="https://user-images.githubusercontent.com/94937578/177779715-d94bcde7-9e87-4d1b-91a6-2880e0b6afab.PNG" width="700px"/>
+</div>
+
+  * Apelido de campos:
+    SELECT Campos AS Apelido FROM...
+ <div align="center">
+<img src="https://user-images.githubusercontent.com/94937578/177779810-05412282-2784-4219-8428-9dd0d29ef070.PNG" width="700px"/>
+</div>
+
+  * Unindo Seleções (UNION [ALL]):
+    SELECT ... UNION SELECT ...
+ <div align="center">
+<img src="https://user-images.githubusercontent.com/94937578/177779887-5fd42069-76d8-4400-adbb-28725a7c00fb.PNG" width="700px"/>
+</div>
+
