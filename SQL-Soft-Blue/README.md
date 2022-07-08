@@ -534,7 +534,8 @@
     - Ler dados
 
 - Como funciona:
-  (FIGURA 39)
+
+<img src="https://user-images.githubusercontent.com/94937578/178013345-8ca14e04-5e60-4076-b0d7-321652cd3e92.PNG"/>
 
 - Linguagem de controle de dados:
   * CREATE USER Nome: Cria um usuário
