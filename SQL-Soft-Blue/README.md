@@ -398,3 +398,79 @@
 <img src="https://user-images.githubusercontent.com/94937578/177779887-5fd42069-76d8-4400-adbb-28725a7c00fb.PNG" width="700px"/>
 
 
+### 5. RELACIONAMENTOS E VISÕES
+
+#### Relacionamentos no SQL:
+  * Informações relacionadas entre si.
+  * Em geral entre diferentes tabelas.
+  * Geralmente possuem campos em comum.
+  * Parâmetro JOIN e suas variações.
+  * SELECT ... FROM T1 JOIN T2 ON T1.FK = T2.PK
+  * SELECT ... FROM T1 JOIN T2 USING Chave
+  * Compatibilidade com banco de dados.
+
+#### INNER JOIN:
+  * JOIN padrão.
+  * Produto cartesiano entre as tabelas.
+  * Combina todas as linhas da primeira tabela com todas as linhas da segunda, que satisfaçam as condições da chave.
+  * SELECT * FROM PESSOAS JOIN VEICULOS ON PESSOAS.CPF = VEICULOS.CPF
+
+<img src="https://user-images.githubusercontent.com/94937578/177986864-2c13b5d5-07ab-4688-aac4-cf636423bbad.PNG" width="700px"/>
+
+#### EQUI JOIN:
+  * Similar ao INNER JOIN.
+  * Chaves de mesmo nome nas tabelas.
+  * SELECT * FROM PESSOAS JOIN VEICULOS USING (CPF)
+
+<img src="https://user-images.githubusercontent.com/94937578/177986934-cb39d6c6-ad19-4f6a-99d1-273e82e67e3f.PNG" width="700px"/>
+
+#### NON EQUI JOIN:
+  * Relacionamento sem campo em comum.
+  * SELECT P.NOME, P.SALARIO, S.FAIXA FROM PESSOAS P INNER JOIN SALARIOS S ON P.SALARIO BETWEEN S.INICIO AND S.FIM
+<img src="https://user-images.githubusercontent.com/94937578/177987004-c3610202-c703-44a8-912c-c58b115e272a.PNG" width="700px"/>
+
+#### OUTER JOIN, LEFT JOIN, LEFT OUTER JOIN:
+  * Linhas que não satisfazem a condição de união.
+  * LEFT: Linhas da primeira tabela cujo campo Condição não satisfaçam a união de tabelas.
+  * SELECT * FROM PESSOAS LEFT JOIN VEICULOS ON PESSOAS.CPF = VEICULOS.CPF
+
+<img src="https://user-images.githubusercontent.com/94937578/177987079-891c9138-6482-486d-a108-23735369dd91.PNG" width="700px"/>
+
+#### RIGHT JOIN, RIGHT OUT JOIN:
+  * Similar ao LEFT JOIN.
+  * RIGHT: Linhas da segunda tabela cujo campo Condição não satisfaçam a união de tabelas.
+  * SELECT * FROM PESSOAS RIGHT JOIN VEICULOS ON PESSOAS.CPF = VEICULOS.CPF
+
+<img src="https://user-images.githubusercontent.com/94937578/177987146-281d184f-d486-46b8-ab70-ad868734c489.PNG" width="700px"/>
+
+#### FULL OUTER JOIN:
+  * Combinação de LEFT JOIN e RIGHT JOIN.
+  * Linhas da primeira e segunda tabela cujos campos de condição não satisfaçam a união de tabelas.
+  * SELECT * FROM PESSOAS  FULL JOIN VEICULOS ON PESSOAS.CPF = VEICULOS.CPF
+
+<img src="https://user-images.githubusercontent.com/94937578/177987214-001ea541-e147-47af-8389-64ceac8bfd5b.PNG" width="700px"/>
+
+#### SELF JOIN:
+  * União da tabela com ela mesma.
+  * SELECT A.NOME, B.NOME AS INDICADO_POR FROM PESSOAS A JOIN PESSOAS B ON A.INDICADO = B.CPF
+
+<img src="https://user-images.githubusercontent.com/94937578/177987290-30429936-4e29-49df-922d-2a405fa35cfd.PNG" width="700px"/>
+
+#### Visões:
+  * Relação que não faz parte do modelo lógico.
+  * Acessível ao usuário como uma relação virtual.
+  * Otimização de espaço em disco.
+  * Centralização de código.
+  * Facilidade de manutenção de expressões SQL.
+
+<img src="https://user-images.githubusercontent.com/94937578/177987355-d7b4b598-1515-44dd-8d23-be94289ad793.PNG" width="700px"/>
+
+#### Criando uma visão: 
+  * CREATE VIEW Nome AS ExpressaoSQL
+  * ALTER VIEW Nome Propriedade
+    Exclusão e nova criação (substituição)
+  * DROP VIEW Nome
+    Apenas a estrutura da visão é removido.
+    Os dados permanecem intactos em suas respectivas tabelas.
+
+
