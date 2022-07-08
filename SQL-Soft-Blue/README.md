@@ -552,4 +552,30 @@
     ALL, SELECT, INSERT, UPDATE, DELETE
   * Estruturas:
     TABLE, VIEW, SEQUENCE
-    
+
+
+
+### 8. TRANSAÇÕES (ACID)
+
+#### Transações:
+  * Conjunto de operações.
+  * ACID:
+    - Atomicidade
+    - Consistência
+    - Isolamento
+    - Durabilidade
+
+#### Exemplo:
+  * Transferência bancária de cliente A para B:
+    - Verifica se há saldo suficiente na conta do cliente A
+    - Retira da conta do cliente A o valor da transferência
+    - Deposita na conta do cliente B o valor da transferência 
+
+<img src="https://user-images.githubusercontent.com/94937578/178018911-5a9d5aaf-c277-4315-b5b8-b8d4cd9a6526.PNG"/>
+
+<img src="https://user-images.githubusercontent.com/94937578/178018987-9d5ba59e-b885-4e90-aa13-1e158fc18b2f.PNG"/>
+
+#### Linguagem de transação de dados:
+  - <b>START TRANSACTION:</b> Inicia a transação
+  - <b>COMMIT:</b> Concretiza a transação
+  - <b>ROLLBACK:</b> Anula a transação
