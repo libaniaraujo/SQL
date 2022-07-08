@@ -474,3 +474,46 @@
     Os dados permanecem intactos em suas respectivas tabelas.
 
 
+
+### 6. FUNÇÕES ESPECIAIS E SUBQUERIES
+
+####Funções de agregação:
+  * <b>COUNT:</b> Contagem de registros de uma consulta.
+    SELECT COUNT (*) FROM funcionarios
+  * <b>SUM:</b> Soma de valores.
+    SELECT SUM (salario) FROM funcionarios
+  * <b>AVG:</b> Média de valores.
+    SELECT AVG (salario) FROM funcionarios
+  * <b>MAX:</b> Valor máximo retornado pela consulta.
+    SELECT MAX (salario) FROM funcionarios
+  * <b>MIN:</b> Valor mínimo retornado pela consulta.
+    SELECT MIN (salario) FROM funcionarios
+
+####Integrando com WHERE:
+  * SELECT Comando FROM Tabela WHERE Condição
+  * SELECT SUM (salario) FROM funcionarios
+    WHERE departamento = 'Recursos Humanos'
+
+####Funções de paginação:
+  * <b>DISTINCT:</b> Seleciona os valores únicos, sem repetição.
+    SELECT DISTINCT (departamento) FROM funcionarios
+  * <b>ORDER BY:</b> Ordena o resultado baseado nas colunas informadas.
+    SELECT * FROM funcionarios ORDER BY salario
+  * <b>LIMIT:</b> Limita o número de resultados retornados.
+    SELECT * FROM funcionarios LIMIT 2
+  * <b>OFFSET:</b> Indica quantos registros devem ser avançados. Avança (pula) registros do resultado.
+    SELECT * FROM funcionarios OFFSET 2
+  * Combinações são permitidas.
+
+- Funções de agrupamento:
+  * <b>GROUP BY:</b> Agrupamento de registros por categoria.
+    SELECT DEPARTAMENTO, AVG (salario) FROM funcionarios GROUP BY departamento
+  * <b>HAVING:</b> Seleção de agrupamento. Filtro de seleção para agrupamento.
+    SELECT departamento, AVG (salario) FROM funcionarios GROUP BY departamento HAVING AVG (salario) > 1500
+
+- Subqueries:
+  * Realização de consultas com filtro de seleção baseado em uma lista ou seleção.
+  * <b>IN / NOT IN:</b>
+    SELECT Nome FROM Funcionarios WHERE Departamento IN ('Marketing', 'TI')
+    SELECT Nome FROM Funcionarios WHERE Departamento IN (SELECT Departamento FROM Funcionarios GROUP BY Departamento HAVING AVG (salario) > 1500)
+
