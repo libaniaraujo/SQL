@@ -535,7 +535,7 @@
 
 ### Como funciona:
 
-<img src="https://user-images.githubusercontent.com/94937578/178013345-8ca14e04-5e60-4076-b0d7-321652cd3e92.PNG"/>
+<img src="https://user-images.githubusercontent.com/94937578/178013345-8ca14e04-5e60-4076-b0d7-321652cd3e92.PNG"  width="700px"/>
 
 #### Linguagem de controle de dados:
   * CREATE USER Nome: Cria um usuário
@@ -571,11 +571,64 @@
     - Retira da conta do cliente A o valor da transferência
     - Deposita na conta do cliente B o valor da transferência 
 
-<img src="https://user-images.githubusercontent.com/94937578/178018911-5a9d5aaf-c277-4315-b5b8-b8d4cd9a6526.PNG"/>
+<img src="https://user-images.githubusercontent.com/94937578/178018911-5a9d5aaf-c277-4315-b5b8-b8d4cd9a6526.PNG" width="700px"/>
 
-<img src="https://user-images.githubusercontent.com/94937578/178018987-9d5ba59e-b885-4e90-aa13-1e158fc18b2f.PNG"/>
+<img src="https://user-images.githubusercontent.com/94937578/178018987-9d5ba59e-b885-4e90-aa13-1e158fc18b2f.PNG" width="700px"/>
 
 #### Linguagem de transação de dados:
   - <b>START TRANSACTION:</b> Inicia a transação
   - <b>COMMIT:</b> Concretiza a transação
   - <b>ROLLBACK:</b> Anula a transação
+
+
+
+### 9. STORED PROCEDURES E TRIGGERS
+
+#### Stored Procedures:
+  * Procedimentos armazenados.
+  * Bloco de código SQL armazenados no banco.
+  * Vantagens:
+    - Centralização
+    - Segurança
+    - Performance / Velocidade
+    - Suporte a transações
+
+#### Exemplo de Stored Procedures:
+  * Limpeza de resgistros vencidos:
+    Verifica em uma tabela de pedidos quais foram abertos a mais de uma semana e ainda não foram confirmados, excluindo-os do sistema
+
+<img src="https://user-images.githubusercontent.com/94937578/178022610-9272d31c-67bc-4ff0-a0a5-e6cab50c6bd3.PNG" width="700px"/>
+
+#### Gerenciando Stored Procedures:
+  * Criando um Stored Procedure:
+    CREATE PROCEDURE Nome
+  * Invocando um Stored Procedure:
+    CALL Nome 
+    EXECUTE Nome
+  * Excluindo uma Stored Procedure:
+    DROP PROCEDURE Nome
+
+#### Triggers (Gatilhos):
+  * Eventos que disparam códigos SQL
+  * Vantagens:
+    - As mesmas das Stored Procedures
+    - Execução de código SQL baseado em eventos
+  * Tipos:
+    - BEFORE INSERT
+    - BEFORE UPDATE
+    - BEFORE DELETE
+    - AFTER INSERT
+    - AFTER DELETE
+    - TEMPORAIS
+
+#### Exemplo de Triggers:
+  * Limpeza de registros vencidos:
+    O mesmo exemplo apresentado para Stored Procedures, agora com início automático em algum evento de Trigger
+    
+<img src="https://user-images.githubusercontent.com/94937578/178022417-88e43765-19ab-4212-8dc6-433dd9d73af1.PNG" width="700px"/>
+
+#### Gerenciando um Trigger:
+  * Criando um Trigger: 
+    CREATE TRIGGER Nome Tipo ON Tabela;
+  * Excluindo um Trigger:
+    DROP TRIGGER Nome
