@@ -517,3 +517,38 @@
     SELECT Nome FROM Funcionarios WHERE Departamento IN ('Marketing', 'TI')
     SELECT Nome FROM Funcionarios WHERE Departamento IN (SELECT Departamento FROM Funcionarios GROUP BY Departamento HAVING AVG (salario) > 1500)
 
+
+
+### 7. CONTROLE DE ACESSO
+
+#### DCL - Controle de Acesso:
+  * Forma de garantir que somente pessoas autorizadas possam realizar ações com os dados.
+  * Níveis de acesso:
+    - Banco de dados
+    - Tabelas
+    - Colunas
+    - Registros
+  * Níveis de ações:
+    - Gerenciar estruturas
+    - Gerenciar dados
+    - Ler dados
+
+- Como funciona:
+  (FIGURA 39)
+
+- Linguagem de controle de dados:
+  * CREATE USER Nome: Cria um usuário
+  * DROP USER Nome: Exclui um usuário
+  * GRANT: Habilita acessos
+  * REVOKE: Revoga acessos
+
+#### Gerenciando acessos:
+  * Habilitando acessos:
+    GRANT Ação ON Estrutura TO Usuário
+  * Revogando acesso:
+    REVOKE Ação ON Estrutura TO Usuário
+  * Ações:
+    ALL, SELECT, INSERT, UPDATE, DELETE
+  * Estruturas:
+    TABLE, VIEW, SEQUENCE
+    
