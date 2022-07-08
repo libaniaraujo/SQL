@@ -477,7 +477,7 @@
 
 ### 6. FUNÇÕES ESPECIAIS E SUBQUERIES
 
-####Funções de agregação:
+#### Funções de agregação:
   * <b>COUNT:</b> Contagem de registros de uma consulta.
     SELECT COUNT (*) FROM funcionarios
   * <b>SUM:</b> Soma de valores.
@@ -489,12 +489,12 @@
   * <b>MIN:</b> Valor mínimo retornado pela consulta.
     SELECT MIN (salario) FROM funcionarios
 
-####Integrando com WHERE:
+#### Integrando com WHERE:
   * SELECT Comando FROM Tabela WHERE Condição
   * SELECT SUM (salario) FROM funcionarios
     WHERE departamento = 'Recursos Humanos'
 
-####Funções de paginação:
+#### Funções de paginação:
   * <b>DISTINCT:</b> Seleciona os valores únicos, sem repetição.
     SELECT DISTINCT (departamento) FROM funcionarios
   * <b>ORDER BY:</b> Ordena o resultado baseado nas colunas informadas.
@@ -505,13 +505,13 @@
     SELECT * FROM funcionarios OFFSET 2
   * Combinações são permitidas.
 
-- Funções de agrupamento:
+#### Funções de agrupamento:
   * <b>GROUP BY:</b> Agrupamento de registros por categoria.
     SELECT DEPARTAMENTO, AVG (salario) FROM funcionarios GROUP BY departamento
   * <b>HAVING:</b> Seleção de agrupamento. Filtro de seleção para agrupamento.
     SELECT departamento, AVG (salario) FROM funcionarios GROUP BY departamento HAVING AVG (salario) > 1500
 
-- Subqueries:
+#### Subqueries:
   * Realização de consultas com filtro de seleção baseado em uma lista ou seleção.
   * <b>IN / NOT IN:</b>
     SELECT Nome FROM Funcionarios WHERE Departamento IN ('Marketing', 'TI')
